@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Personalized Surveys</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/MySyles2.css" rel="stylesheet" />
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#0094ff">
+    <form id="form1" runat="server" method="post">
+        <div class="container-fluid">
+            <div class="jumbotron" style="border:1px #000 solid; margin-top:15px;margin-bottom:0px;
+                        padding-bottom:10px;padding-top:10px;">
+                <div style="float:right;">
+                    <asp:Label ID="Usernamelbl" runat="server" Text="Sign In"></asp:Label>
+                    <asp:Button ID="Logoutbtn" runat="server" Text="Logout" OnClick="Logoutbtn_OnClick"/>
+                </div>
+                <h1>Personalized Surveys</h1>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.aspx">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="layoutmanager.aspx">Layout Manager</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="surveymanager.aspx">Survey Manager</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="viewsurveys.aspx">View Surveys</a>
+                  </li>
+                </ul>
+            </div>
+        <div class="jumbotron" style="border:1px #000 solid; margin-top:15px;margin-bottom:15px;
+                        padding-bottom:10px;padding-top:10px;">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div id="footer" class="jumbotron" style="border:1px #000 solid; margin-top:15px;margin-bottom:15px;
+                        padding-bottom:10px;padding-top:10px;">
+        </div>
+    </div>
+        <%--<div id="helpmenu" class="container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                      <h3>HOME</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                      <h3>Menu 1</h3>
+                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                      <h3>Menu 2</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                      <h3>Menu 3</h3>
+                      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>--%>
+    </form>
+</body>
+</html>
